@@ -1,0 +1,22 @@
+{
+  "name": "product_form",
+  "version": "1.0.0",
+  "description": "Форма на странице товара",
+  "author": "LiquidHub.ru",
+  "type": "snippets",
+  "homepage": "https://github.com/insales-components/product_form",
+  "props": {
+    "common": false,
+    "liquid": true
+  },
+  "plugins": [
+    {
+      "name": "variantsModifier",
+      "files": ["https://cdn.jsdelivr.net/gh/VladimirIvanin/variantsModifier@0.5.8/dist/variantsModifier.js"]
+    }
+  ],
+  "dependencies": {
+    "scss_variables": "https://github.com/insales-components/scss_variables",
+    "quantity": "https://github.com/insales-components/quantity"
+  }
+}
