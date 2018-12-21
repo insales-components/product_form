@@ -11,7 +11,7 @@ $(document).ready(function() {
     fileUrl: (typeof fileUrl == 'undefined') ? {} : fileUrl,
     options: {
       //'Цвет': 'option-image',
-      'default': 'option-select'
+      //'default': 'option-select'
     }
   });
 
