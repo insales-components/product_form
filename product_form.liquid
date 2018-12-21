@@ -62,31 +62,17 @@
 
   {% include "quantity", input_type: 'product' %}
 
-  {% unless product.is_bundle and account.enable_comparison? == false %}
-    <button class="bttn-compares is-icon" data-compares-trigger="{{ product.id }}">
-      <i class="fa fa-exchange" aria-hidden="true"></i>
-    </button>
-    <button class="bttn-compares is-bg" data-compares-trigger="{{ product.id }}">
-    </button>
-
-    <button class="bttn-compares" data-compares-trigger="{{ product.id }}" data-compares-added="Удалить из сравнения" data-compares-not-added="Добавить в сравнение">
-    </button>
-  {% endunless %}
-
   <div class="product-buy">
-    <button type="submit" data-item-add class="bttn-prim in-product">
+    <button type="submit" data-item-add class="bttn-primary in-product">
       В корзину
     </button>
   </div>
 
   {% if account.quick_checkout.enabled %}
-    <button type="button" class="bttn-second" data-quick-checkout="[data-product-id='{{ product.id }}']">
+    <button type="button" class="bttn-secondary" data-quick-checkout="[data-product-id='{{ product.id }}']">
       В один клик
     </button>
   {% endif %}
-
-    <button type="button" class="bttn-favorite" data-favorites-trigger="{{ product.id }}">
-    </button>
 
   </form>
 </div>
