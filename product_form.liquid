@@ -63,13 +63,13 @@
   {% include "quantity", input_type: 'product' %}
 
   <div class="product-buy">
-    <button type="submit" data-item-add class="btn-primaryary in-product">
+    <button type="submit" data-item-add class="btn-primary in-product">
       В корзину
     </button>
   </div>
 
   {% if account.quick_checkout.enabled %}
-    <button type="button" class="btn-secondaryary" data-quick-checkout="[data-product-id='{{ product.id }}']">
+    <button type="button" class="btn-secondary" data-quick-checkout="[data-product-id='{{ product.id }}']">
       В один клик
     </button>
   {% endif %}
