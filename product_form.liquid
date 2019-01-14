@@ -6,18 +6,20 @@
   </h1>
 
 
-  <div class="product-available" data-product-available>
-    {% if product.available %}
-    Товар в наличии
-    {% else %}
-    Товара нет в наличии
-    {% endif %}
-  </div>
+  <div class="row flex-middle flex-between">
+    <div class="product-available" data-product-available>
+      {% if product.available %}
+      Товар в наличии
+      {% else %}
+      Товара нет в наличии
+      {% endif %}
+    </div>
 
-  <div class="product-sku" data-product-sku>
-    {% if product.variants.first.sku %}
-    арт. {{ product.variants.first.sku }}
-    {% endif %}
+    <div class="product-sku" data-product-sku>
+      {% if product.variants.first.sku %}
+      арт. {{ product.variants.first.sku }}
+      {% endif %}
+    </div>
   </div>
 
   <div class="product-prices">
@@ -63,13 +65,13 @@
   {% include "quantity", input_type: 'product' %}
 
   <div class="product-buy">
-    <button type="submit" data-item-add class="btn-primary in-product">
+    <button type="submit" data-item-add class="btn btn-primary in-product">
       В корзину
     </button>
   </div>
 
   {% if account.quick_checkout.enabled %}
-    <button type="button" class="btn-secondary" data-quick-checkout="[data-product-id='{{ product.id }}']">
+    <button type="button" class="btn btn-secondary" data-quick-checkout="[data-product-id='{{ product.id }}']">
       В один клик
     </button>
   {% endif %}
